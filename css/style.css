@@ -1,0 +1,97 @@
+/* Formatear estilos por defecto del navegador con el selector universal */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Hacer q el Tamaño Total de la Caja (Box Model) Siempre sea el Ancho width: y Alto height: del content */
+}
+
+body {
+    margin: 0; /* margen de todos los elementos */
+    font-size: 2rem; /* Tamaño de la letra */
+    line-height: 1; /* Distancia entre los renglones del texto */
+    color: #333;
+    overflow-x: hidden; /* Ocultar el content que se Desborde, esto quita las barras laterales de scroll */
+}
+
+.header {
+    height: 100vh; /* alto de toda la pantalla */
+    width: 100%;
+    color: #fff;
+    display: flex; /* Usar flexbox */
+    /* Centrar horizontal y verticlamente toda la landing page */
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    max-width: 40rem;
+    padding-left: 1rem; /* relleno hacia la izquierda */
+    padding-right: 1rem; /* relleno hacia la derecha */
+    margin: auto;
+    text-align: center;
+}
+
+.header-video {
+    position: absolute;
+    top: 0; /* arriba */
+    left: 0; /* izquierda */
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-video video {
+    /* Ajustar video al tamaño del viewport */
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.header-overlay {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 1; /* Hacer q la Capa de color transparente este por encima del video */
+    opacity: 0.65; /* Opacar (hacer transparente) el color */
+}
+
+.header-content {
+    z-index: 2; /* Hacer q el contenido de la pagina (texto) este por encima de la capa del video y del color */
+}
+
+.header-content h2 {
+    font-size: 8vw;
+    margin-bottom: 0; /* Margen hacia abajo para separar el titulo <h1> y el parrafo <p> */
+    font-family: "Klee One", cursive; /* Fuente (tipo) de letra */
+}
+
+/* Boton que redirige a un enlace */
+.btn {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    background: #c44569;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem; /* relleno del boton */
+    text-decoration: none; /* quitar subrayado del enlace */
+}
+
+/* Video responsive */
+@media (max-width: 960px) {
+    .content {
+        padding: 0 3rem 0 3rem; /* arriba derecha abajo izquierda */
+    }
+}
+
+.fuera {
+    margin: 0;
+    background-color: red;
+}

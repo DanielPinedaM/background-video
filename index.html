@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--  -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap"
+            rel="stylesheet"
+        />
+        <title>background-video</title>
+    </head>
+
+    <body>
+
+        <!-- background-video -->
+        <!-- Contenedor general y Encabezado: <header>-->
+        <header class="header content">
+            <!-- Hay q poner una capa encima de otra para poder crear el background-video. Las capas son:
+                Contenedor del video: es la parte q esta mas al fondo -->
+            <div class="header-video">
+                <video autoplay loop playsinline muted>
+                    <source src="assets/video/bg-video.mp4" type="video/mp4" />
+                    <source src="assets/video/bg-video.avi" type="video/avi" />
+                </video>
+            </div>
+            <!-- Capa de color transparente: Sobre esto esta escrito el texto (contenido de la pagina web) -->
+            <div class="header-overlay"></div>
+            <!-- Texto: Es el contenido de la pagina web -->
+            <div class="header-content">
+                <h2>Bienvenid@s a mi sitio</h2>
+                <a href="#" target="_blank" class="btn">Contáctame</a>
+            </div>
+        </header>
+        <div class="fuera">
+            <p>estoy fuera del video</p>
+        </div>
+    </body>
+</html>
